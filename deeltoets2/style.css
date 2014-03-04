@@ -12,3 +12,45 @@
     	display: none;
     }
     .show {display: flex !important;}
+
+@-webkit-keyframes banaan {
+	0% {left: 1280px;
+		bottom: 600px;}
+	10% {
+		left: 1000px;
+		}
+	25% {
+		}
+	35% {left: 500px;
+		bottom: 0px;}
+	90% {left: 500px;
+		bottom: 0px;}
+	100% {left: -100px;
+		bottom: 0px;}
+}
+@-webkit-keyframes aapje {
+	0% {left: -140px;
+		}
+	10% {
+		left: 0px;
+		}
+	50% {left: 480px;
+		}
+	80% {left: 480px;
+		}
+	100% {left: -100px;
+		}
+}
+
+section:last-child img:first-child {
+	position: absolute;
+	left: 1280px;
+	z-index: -1;
+	-webkit-animation: banaan 10s ease-in-out;
+}
+section:last-child img:nth-child(2) {
+	position: absolute;
+	left: -140px;
+	bottom:10px;
+	-webkit-animation: aapje 5s ease-in-out 5s;
+}
