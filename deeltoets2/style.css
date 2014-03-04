@@ -1,0 +1,14 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+    fieldset {
+    	display: flex;
+    }
+    #projectkeus {
+    	display: none;
+    }
+    #Stage {
+    	display: none;
+    }
+    .show {display: flex !important;}
