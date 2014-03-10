@@ -3,136 +3,119 @@
 <head>
     <title>Opleiding</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="style.css">
-<script src="http://code.jquery.com/jquery-latest.min.js"
-        type="text/javascript"></script>
-    <script type="text/javascript">
-jQuery(document).ready(function ($) {
-	$('#stagebedrijf').click(function() {
-	   if($('#stagebedrijf').is(':checked')) {
-	   		$('#Stage').addClass( "show" );
-	   		$('#projectkeus').removeClass( "show" );
-	   	}
-	});
-	$('#project').click(function() {
-	   if($('#project').is(':checked')) {
-	   		$('#projectkeus').addClass( "show" );
-	   		$('#Stage').removeClass( "show" );
-	   	}
-	});
-});
-
-    </script>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 	<main>
 		<section>
 			<h1>Aanmelden</h1>
 			<p>Bent u geinteresseerd in samenwerken met CMD Amsterdam? Dat kan! Tijdens de opleiding werken studenten aan projecten voor echte opdrachtgevers. Ook lopen de studenten stage, in het tweede en afstudeerjaar.</p>
-			<blockquote>CMD Amsterdam zoekt altijd naar positieve verbindingen met de creatieve stad Amsterdam.</blockquote>
+			<blockquote>- CMD Amsterdam zoekt altijd naar positieve verbindingen met de creatieve stad Amsterdam.</blockquote>
 			<p>Voor het aanmelden van stageplekken of projecten kunt u onderstaand formulier invullen. Wij nemen zo nodig contact met u op nadat het formulier is verstuurd. Voor vragen of opmerkingen kunt u <a href="contact.html">contact</a> met ons op.</p>
 			<form>
 		    	<fieldset  id="contactform" name="contactform">
 			    	<legend>Contactgegevens</legend>
 
-			        <label for="name">Naam:*</label>
+			        <label for="name">Naam:<span>*</span></label>
 			        <input name="name" id="name" type="text"  placeholder="Uw naam" required>
 			       
 			        <label for="company">Bedrijf</label>
 			        <input name="company" id="company" type="text"  placeholder="(bedrijf)">
 
-			        <label for="adress">Adres:*</label>
+			        <label for="adress">Adres:<span>*</span></label>
 			        <input name="adress" id="adress" type="text"  placeholder="Uw adres" required>
 
-			        <label for="zip">Postcode:*</label>
+			        <label for="zip">Postcode:<span>*</span></label>
 			        <input name="zip" id="zip" type="text"  placeholder="Uw postcode" required>
 
-			        <label for="place">Plaats:*</label>
+			        <label for="place">Plaats:<span>*</span></label>
 			        <input name="place" id="place" type="text"  placeholder="Uw plaatst" required>
 
-			        <label for="phone">Telefoon nummer:*</label>
+			        <label for="phone">Telefoon nummer:<span>*</span></label>
 			        <input name="phone" id="phone" type="tel"  placeholder="Uw telefoonnummer" required>
 
-			        <label for="email">E-mail:*</label>
+			        <label for="email">E-mail:<span>*</span></label>
 			        <input name="email" id="email" type="email"  placeholder="Uw e-mailadress" required>
 		        </fieldset>
 		    	<fieldset id="aanmelden" name="aanmelden">
 			    	<legend>Ik wil mijn aanmelden:</legend>
+			        <details>
+			        	<summary>Voor een project</summary>
+				    	<fieldset id="projectkeus" name="projectkeus">
+					    	<legend>Project</legend>
 
-			        <label for="project">Voor een project</label>
-			        <input name="aanmelden" id="project" type="radio" class='project'>
-			       
-			        <label for="stagebedrijf">Als stagebedrijf</label>
-			        <input name="aanmelden" id="stagebedrijf" type="radio"> 
+					        <label for="title">Titel:</label>
+					        <input name="title" id="title" type="text"  placeholder="De titel van het project" >
+					       
+					        <label for="Opdrachtomschrijving">Opdrachtomschrijving:</label>
+					        <input name="Opdrachtomschrijving" id="Opdrachtomschrijving" type="text"  placeholder="wat houdt het project in?">
+
+					        <label for="Doelgroepomschrijving">Doelgroepomschrijving:</label>
+					        <input name="Doelgroepomschrijving" id="Doelgroepomschrijving" type="text"  placeholder="Wie is de doelgroep?">
+
+					        <label for="Doelstelling">Doelstelling/intentievanhetproject:</label>
+					        <input name="Doelstelling" id="Doelstelling" type="text" placeholder="Wat is de doelstelling van het project?">
+
+					        <label for="Looptijd">Looptijd:</label>
+					        <input name="Looptijd" id="Looptijd" type="text" placeholder="Hoeland duurt het project?">
+
+					        <label for="Deadline">Deadline:</label>
+					        <input name="Deadline" id="Deadline" type="text" placeholder="Wanneer is de deadline?">
+
+					        <select>
+								<option value="eerstejaarsstudenten">Eerstejaars studenten</option>
+								<option value="tweedejaarsstudenten">Tweedejaars studenten</option>
+								<option value="derdejaarsstudenten">Derdejaars studenten</option>
+								<option value="afstudeerstudenten">Afstudeer studenten</option>
+								<option value="onbekend">Onbekend</option>
+							</select>
+						</fieldset>
+					</details>
+					<details>
+			        	<summary>Als stagebedrijf</summary>
+				    	<fieldset id="Stage" name="Stage">
+					    	<legend>Stage</legend>
+
+					    	<label for="studeerjaar">Studeerjaar:</label>
+					        <select id="studeerjaar" name="studeerjaar">
+								<option value="tweedejaarsstudenten">Tweedejaars studenten</option>
+								<option value="afstudeerstudenten">Afstudeer studenten</option>
+								<option value="onbekend">Onbekend</option>
+							</select>
+
+							<label for="hoeveelweken">Duur stage:</label>
+					        <select id="hoeveelweken" name="hoeveelweken">
+								<option value="10 weken">10 weken</option>
+								<option value="20 weken">20 weken</option>
+							</select>	
+						
+					        <label for="werkzaamheden">Beschrijving werkzaamheden:</label>
+					        <textarea rows="5" id="werkzaamheden" name="werkzaamheden" form="Stage" placeholder="Wat zijn de werkzaamheden?"></textarea>
+
+					        <label for="Bedrijfsnaam">Bedrijfsnaam:</label>
+					        <input name="Bedrijfsnaam" id="Bedrijfsnaam" type="text"  placeholder="Bedrijfsnaam" >
+					       
+					        <label for="adress">Adres:</label>
+					        <input name="adress" id="adress" type="text"  placeholder="Uw adres" >
+
+					        <label for="zip">Postcode:</label>
+					        <input name="zip" id="zip" type="text"  placeholder="Uw postcode" >
+
+					        <label for="place">Plaats:</label>
+					        <input name="place" id="place" type="text"  placeholder="Uw plaatst" >
+
+					        <label for="Sector">Sector:</label>
+					        <input name="Sector" id="LoopSectortijd" type="text" placeholder="Welke sector bevind u zich?">
+
+					        <label for="CoreBusiness">Core Business:</label>
+					        <input name="CoreBusiness" id="CoreBusiness" type="text" placeholder="Kern van uw bedrijf?">
+									       
+				        </fieldset>
+				    </details>
 		        </fieldset>
-		    	<fieldset id="projectkeus" name="projectkeus">
-			    	<legend>Project</legend>
-
-			        <label for="title">Titel:</label>
-			        <input name="title" id="title" type="text"  placeholder="De titel van het project" >
-			       
-			        <label for="Opdrachtomschrijving">Opdrachtomschrijving:</label>
-			        <input name="Opdrachtomschrijving" id="Opdrachtomschrijving" type="text"  placeholder="wat houdt het project in?">
-
-			        <label for="Doelgroepomschrijving">Doelgroepomschrijving:</label>
-			        <input name="Doelgroepomschrijving" id="Doelgroepomschrijving" type="text"  placeholder="Wie is de doelgroep?">
-
-			        <label for="Doelstelling">Doelstelling/intentievanhetproject:</label>
-			        <input name="Doelstelling" id="Doelstelling" type="text" placeholder="Wat is de doelstelling van het project?">
-
-			        <label for="Looptijd">Looptijd:</label>
-			        <input name="Looptijd" id="Looptijd" type="text" placeholder="Hoeland duurt het project?">
-
-			        <label for="Deadline">Deadline:</label>
-			        <input name="Deadline" id="Deadline" type="text" placeholder="Wanneer is de deadline?">
-
-			        <select>
-						<option value="eerstejaarsstudenten">Eerstejaars studenten</option>
-						<option value="tweedejaarsstudenten">Tweedejaars studenten</option>
-						<option value="derdejaarsstudenten">Derdejaars studenten</option>
-						<option value="afstudeerstudenten">Afstudeer studenten</option>
-						<option value="onbekend">Onbekend</option>
-					</select>
-					<input type="submit">	
-		        </fieldset>
-		    	<fieldset id="Stage" name="Stage">
-			    	<legend>Stage</legend>
-
-			        <select>
-						<option value="tweedejaarsstudenten">Tweedejaars studenten</option>
-						<option value="afstudeerstudenten">Afstudeer studenten</option>
-						<option value="onbekend">Onbekend</option>
-					</select>
-
-					<label>Hoelang is de stage?</label>
-					<label for="10">10 weken</label>
-			        <input name="10" id="10" type="radio">
-			       
-			        <label for="20">20 weken</label>
-			        <input name="20" id="20" type="radio">
-
-			        <label for="werkzaamheden">Beschrijving werkzaamheden:</label>
-			        <textarea rows="5" id="werkzaamheden" name="werkzaamheden" form="Stage" placeholder="Wat zijn de werkzaamheden?"></textarea>
-
-			        <label for="Bedrijfsnaam">Bedrijfsnaam:</label>
-			        <input name="Bedrijfsnaam" id="Bedrijfsnaam" type="text"  placeholder="Bedrijfsnaam" >
-			       
-			        <label for="adress">Adres:</label>
-			        <input name="adress" id="adress" type="text"  placeholder="Uw adres" >
-
-			        <label for="zip">Postcode:</label>
-			        <input name="zip" id="zip" type="text"  placeholder="Uw postcode" >
-
-			        <label for="place">Plaats:</label>
-			        <input name="place" id="place" type="text"  placeholder="Uw plaatst" >
-
-			        <label for="Sector">Sector:</label>
-			        <input name="Sector" id="LoopSectortijd" type="text" placeholder="Welke sector bevind u zich?">
-
-			        <label for="CoreBusiness">Core Business:</label>
-			        <input name="CoreBusiness" id="CoreBusiness" type="text" placeholder="Kern van uw bedrijf?">π
-					<input type="submit">			       
-		        </fieldset>
+		        <fieldset>
+		        	<input type="submit">	
+		    	</fieldset>
     		</form>
 		</section>
 		<section>
