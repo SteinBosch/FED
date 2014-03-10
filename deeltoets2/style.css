@@ -51,7 +51,7 @@ h1:first-letter{
 }
 h1:hover {
 	font-size: 175%;
-	    -webkit-transition: all 1s ease-in-out;
+	-webkit-transition: all 1s ease-in-out;
     -moz-transition: all 1s ease-in-out;
     -o-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
@@ -80,7 +80,7 @@ h2:first-letter{
 }
 h2:hover {
 	font-size: 150%;
-	    -webkit-transition: all 1s ease-in-out;
+	-webkit-transition: all 1s ease-in-out;
     -moz-transition: all 1s ease-in-out;
     -o-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
@@ -108,7 +108,7 @@ h3:first-letter{
 }
 h3:hover {
 	font-size: 125%;
-	    -webkit-transition: all 1s ease-in-out;
+	-webkit-transition: all 1s ease-in-out;
     -moz-transition: all 1s ease-in-out;
     -o-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
@@ -190,19 +190,19 @@ summary {
 	font-style: italic;
 }
 form > fieldset:nth-child(1) {
-background-color: #7db9e8	;
+	background-color: #7db9e8	;
 }
 form > fieldset:nth-child(2) {
-background-color: #7de894	;
+	background-color: #7de894	;
 }
 form > fieldset:nth-child(2) > details:nth-child(2) >fieldset {
-background-color: #e8a07d	;
+	background-color: #e8a07d	;
 }
 form > fieldset:nth-child(2) > details:nth-child(3) >fieldset {
-background-color: #7ddde8	;
+	background-color: #7ddde8	;
 }
 form > fieldset:nth-child(3) {
-background-color: #e8d37d	;
+	background-color: #e8d37d	;
 }
 @-webkit-keyframes banaan {
 	0% {left: 1280px;
